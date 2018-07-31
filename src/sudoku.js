@@ -10,13 +10,15 @@ Sudoku.prototype.checkRow = function() {
 Sudoku.prototype.checkAllRows = function() {
   //var output = this.board.sort().join("");
   for(var i = 0; i < this.board.length; i++){
-    this.board[i].sort()
-
-  if (this.board[i] === [1, 2, 3, 4, 5, 6, 7, 8, 9]){
-    return "Yes";
+    var hello = this.board[i].sort()
+    var row = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  for(var k = 0; k < hello.length; k++){
+    if (hello[k] != row[k]){
+          return "No";
+    }
+return "Yes";
   }
-  var output = this.board;
-  console.log(output);
+
 }
 
 
